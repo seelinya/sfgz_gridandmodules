@@ -1,0 +1,36 @@
+summary:focus {
+  outline: none;
+}
+
+html {
+  font-family: 'Helvetica', sans-serif;
+  hyphens: auto;
+  font-size: 10rem;
+  color: #ff00a0;
+}
+
+body {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: #a2ffee;
+  transition: all 10s ease;
+  filter: blur(3px);
+}
+
+
+body:hover .raster {
+  color: #a2ffee;
+  hyphens: auto;
+  font-size: 3rem;
+  transition: all 5s ease;
+  text-align: center;
+}
+
+body:hover{
+  background-color: #ff00a0;
+  filter: blur(0px);
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
