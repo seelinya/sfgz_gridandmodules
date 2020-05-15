@@ -1,0 +1,75 @@
+summary:focus {
+  outline: none;
+}
+
+html {
+  font-family: 'Helvetica', sans-serif;
+  hyphens: auto;
+  font-size: 5rem;
+}
+
+body {
+  background: #B29085;
+  margin: 150px auto;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  max-width: 650px;
+}
+
+.raster {
+  display: grid;
+  color: black;
+  grid-gap: 2%;
+  grid-template-columns: repeat(5, 18%);
+  grid-template-rows: repeat(5, 18%);
+  grid-auto-flow: row dense;
+  height: 600px;
+}
+
+.raster div {
+  display: grid;
+  border-radius: 0em;
+  text-align: center;
+}
+
+@media screen and (max-width: 55em){
+body{
+background-color: black;
+}
+.raster {
+  display: grid;
+  color: #B29085;
+  grid-gap: 2%;
+  grid-template-columns: repeat(5, 18%);
+  grid-template-rows: repeat(5, 18%);
+  grid-auto-flow: row dense;
+  height: 600px;
+}
+
+.raster div {
+  display: grid;
+  border-radius: 0em;
+  text-align: center;
+}
+
+.E {
+  order: -9;
+}
+
+.I {
+  order: -8;
+}
+
+.N {
+  order: -7;
+}
+
+}
+
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
