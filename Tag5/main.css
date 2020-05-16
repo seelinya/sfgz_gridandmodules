@@ -16,17 +16,22 @@ body {
   grid-template-columns: 6em 1fr 6em;
   grid-template-rows: 33.333vh 33.333vh 33.333vh;
   grid-gap: 1rem;
-  justify-content: center;
-  align-content: center;
+  margin: auto;
 
 }
 
 header {
+  display: flex;
   background: linear-gradient(to bottom right, #3801FF, #CC1E79);
   color: white;
   grid-area: header;
   font-size: 1rem;
   font-weight: lighter;
+  justify-items: center;
+  align-items: center;
+}
+
+header p {
   text-align: center;
 }
 
@@ -39,8 +44,7 @@ article {
   height: 10rem;
   width: 10rem;
   letter-spacing: 0.3rem;
-  justify-items: center;
-  align-items: center;
+  margin: auto;
 }
 
 
@@ -49,6 +53,8 @@ footer {
   color: white;
   grid-area: footer;
   text-align: center;
+  justify-items: center;
+  align-items: center;
 }
 
 
