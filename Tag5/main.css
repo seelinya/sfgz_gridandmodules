@@ -16,6 +16,8 @@ body {
   grid-template-columns: 6em 1fr 6em;
   grid-template-rows: 33.333vh 33.333vh 33.333vh;
   grid-gap: 1rem;
+  justify-content: center;
+  align-content: center;
 
 }
 
@@ -37,8 +39,8 @@ article {
   height: 10rem;
   width: 10rem;
   letter-spacing: 0.3rem;
-  justify-content: space-around;
-  align-content: flecenter;
+  justify-items: center;
+  align-items: center;
 }
 
 
