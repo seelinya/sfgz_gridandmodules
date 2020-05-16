@@ -13,6 +13,7 @@ body {
   background-color: black;
   align-content: center;
   justify-content: center;
+  margin-top: 100px;
 }
 
 
@@ -21,7 +22,7 @@ body {
   position: fix;
   justify-content: center;
   margin: auto;
-  border: 3px white solid;
+  border: 5px white solid;
   width: 500px;
   height: 500px;
   margin-top: auto;
@@ -52,26 +53,28 @@ body {
 
 @keyframes bewegen {
   0% {
-    background-color: red;
     left: 0px;
-    top: 400px
+    top: 50px;
   }
 
   10%{
   align-items: right;
+  top: 360px
   }
 
 
   50%{
     left: 30px;
+    top: 0px;
   }
 
   75%{
-    left: 30px;
+    left: 90px;
+    top:420px;
   }
   100%{
-    background-color: blue;
     left: 120px;
+    top: 0px;
   }
 }
 
