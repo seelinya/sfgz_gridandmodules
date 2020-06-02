@@ -1,0 +1,213 @@
+summary:focus {
+  outline: none;
+}
+
+html {
+  font-family: 'futura', sans-serif;
+}
+
+body {
+  max-width: 100vw;
+  margin: auto;
+  background: black;
+  display: grid;
+  grid-template-areas: "nav nav nav" "header header header" "ernst ernst ernst" "madame madame madame" "nav zuhause aside" "maison maison maison";
+  grid-template-columns: 6em 1fr 6em;
+  grid-template-rows: 10vh 100vh 100vh 100vh 100vh 100vh;
+  margin: auto;
+
+}
+
+nav {
+  display: flex;
+  grid-area: nav;
+  color: white;
+  text-align: right;
+  margin-right: 30px;
+  background-color: red;
+}
+a {
+  color: white;
+  text-align: right;
+  margin-right: 30px;
+}
+
+header {
+  grid-area: header;
+  margin-top: 30vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+header h1 {
+  text-align: left;
+  color: #8E00FD;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+header p {
+  text-align: left;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  line-height: 130%;
+  font-weight: 500;
+}
+
+.ernst {
+  grid-area: ernst;
+  background: linear-gradient(135deg, #63116a 0%,#000000 52%,#63116a 100%);
+}
+
+.background-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+  z-index: 1;
+}
+
+
+.ernst-text {
+  display:block;
+  text-align: right;
+  color: white;
+  font-weight: 500;
+  margin-right: 10vw;
+  position: absolute;
+  z-index: 5;
+}
+
+.ernst-text p {
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 10vw;
+  padding-top: -200px;
+}
+
+.ernst-text h1 {
+  font-style: italic;
+  color: white;
+  letter-spacing: 0.2rem;
+  font-size: 10rem;
+  font-weight: 600;
+  line-height: 1%;
+}
+
+.ernst-text h2 {
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  margin-left: 61vw;
+  margin-right: 10vw;
+  line-height: 170%;
+}
+
+.madame {
+  display: flex;
+  background: linear-gradient(to bottom right, #3801FF, #CC1E79);
+  color: white;
+  grid-area: madame;
+  font-size: 1rem;
+  font-weight: lighter;
+  justify-items: center;
+  align-items: center;
+}
+
+.madame p {
+  text-align: center;
+  display:flex;
+  margin:auto;
+}
+
+
+.zuhause {
+  border: 3px white solid;
+  grid-area: zuhause;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.3rem;
+  height: 10rem;
+  width: 10rem;
+  margin:auto;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+.zuhause p{
+  font-size: 1.3rem;
+}
+
+.zuhause p1{
+  font-size: 4.7rem;
+  line-height: 30%;
+}
+
+.zuhause p2{
+  font-size: 1.1rem;
+  line-height: 140%;
+}
+
+
+.maison {
+  display: flex;
+  background: #8E00FD;
+  color: white;
+  grid-area: maison;
+  align-items: center;
+  font-weight: 400;
+}
+
+.maison p {
+  margin: auto;
+  text-align: center;
+  font-size: 9rem;
+  letter-spacing: 0.4rem;
+}
+}
+    @media all and (max-width: 48em) {
+      body {
+        grid-template-areas: "header header header" "article" "footer footer footer";
+        grid-template-columns: 50px 2fr 50px;
+        grid-template-rows: 100vh 100vh 100vh;
+      }
+
+      .madame {
+        background: linear-gradient(to bottom right, #3801FF, #CC1E79);
+        color: white;
+        grid-area: header;
+        font-size: 1rem;
+        font-weight: lighter;
+        text-align: center;
+        justify-content: center;
+        writing-mode: vertical-rl;
+      }
+
+      article {
+        border: 0px white solid;
+        grid-area: article;
+        text-align: center;
+        color: white;
+        letter-spacing: 0.3rem;
+        font-size: 4rem;
+      }
+
+      .footer{
+        background: #8E00FD;
+        grid-area: footer;
+        text-align: center;
+        font-size: 3.5rem;
+      }
+
+      .rotate {
+        margin-top: 40vh;
+        transform: rotate(30deg);
+        color: white;
+      }
+
+
+
+    }
