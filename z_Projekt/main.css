@@ -11,9 +11,9 @@ body {
   margin: auto;
   background: black;
   display: grid;
-  grid-template-areas: "section section section" "ernst ernst ernst" "madame madame madame" "nav zuhause aside" "maison maison maison" "vermeiden vermeiden vermeiden" "footer footer footer";
+  grid-template-areas: "section section section" "ernst ernst ernst" "zuhause1 zuhause1 zuhause1" "madame madame madame" "zuhause2 zuhause2 zuhause2" "maison maison maison" "zuhause3 zuhause3 zuhause3" "vermeiden vermeiden vermeiden" "zuhause4 zuhause4 zuhause4" "madame2 madame2 madame2" "zuhause5 zuhause5 zuhause5" "maison2 maison2 maison2" "zuhause6 zuhause6 zuhause6" "footer footer footer";
   grid-template-columns: 6em 1fr 6em;
-  grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh 100vh;
+  grid-template-rows: repeat(14, 100vh);
   margin: auto;
 }
 
@@ -22,29 +22,38 @@ header {
   color: white;
   position: fixed;
   display: flex;
-  text-align: right;
   width: 100vw;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 header a {
   color: white;
-  text-align: right;
-  margin-right: 30px;
   align-content: right;
   text-decoration: none;
+  text-align: right;
 }
 
 header img {
-  margin-left: 30px;
   height: 30px;
+}
 
+.left {
+  justify-items: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
 }
 
 section {
   grid-area: section;
   margin-top: 30vh;
   margin-left: 10vw;
-  margin-right: 10vw;
+  margin-right: 15vw;
 }
 
 section h1 {
@@ -55,14 +64,53 @@ section h1 {
   font-weight: lighter;
 }
 
+
 section p {
   text-align: left;
+  position: absolute;
   color: white;
   letter-spacing: 0.2rem;
   font-size: 3.5rem;
   line-height: 130%;
   font-weight: 500;
+  margin-right: 5vw;
 }
+
+.party {
+  animation-name: blur;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-delay: 1s;
+}
+
+
+@keyframes blur {
+  0% {
+    filter: blur(2px);
+    opacity: 0.8;
+  }
+
+  20%{
+  filter: blur(1px);
+  }
+
+  50%{
+  filter: blur(3px);
+  opacity: 0.5;
+  }
+
+  20%{
+  filter: blur(4px);
+  }
+
+  100%{
+  filter: blur(1px);
+  }
+}
+
+
 
 .ernst {
   grid-area: ernst;
@@ -101,7 +149,7 @@ section p {
   margin-right: 10vw;
 }
 
-.ernst-text-cut:nth-child(1) {
+.ernst-text-cut:nth-child(2) {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -126,16 +174,64 @@ section p {
   align-items: center;
 }
 
+.madame2 {
+  display: flex;
+  background: linear-gradient(to bottom right, #3801FF, #CC1E79);
+  color: white;
+  grid-area: madame2;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  justify-items: center;
+  align-items: center;
+}
+
 .madame p {
   text-align: center;
   display:flex;
   margin:auto;
 }
 
-.zuhause {
-  grid-area: zuhause;
+.madame2 p {
+  text-align: center;
+  display:flex;
+  margin:auto;
+}
+
+
+.zuhause1 {
+  grid-area: zuhause1;
+  justify-content: center;
+  align-content: center;
+}
+
+.zuhause2 {
+  grid-area: zuhause2;
+  background-image: url("./z_bilder/maxresdefault.jpg");
+  opacity: 0.3;
+}
+
+.zuhause3 {
+  grid-area: zuhause3;
+  background-image: url("./z_bilder/maxresdefault.jpg");
+  opacity: 0.5;
+}
+
+.zuhause4 {
+  grid-area: zuhause4;
+  background-image: url("./z_bilder/maxresdefault.jpg");
+  opacity: 0.8;
+}
+
+.zuhause5 {
+  grid-area: zuhause5;
   background-image: url("./z_bilder/maxresdefault.jpg");
 }
+
+.zuhause6 {
+  grid-area: zuhause6;
+  background-image: url("./z_bilder/maxresdefault.jpg");
+}
+
 .zuhause-text {
   text-align: center;
   color: white;
@@ -143,23 +239,104 @@ section p {
   height: 10rem;
   width: 10rem;
   font-weight: 500;
-  margin-left: 30vh;
-  margin-top: 50vh;
-  transform: rotate(30deg);
-}
-.zuhause-text p{
-  font-size: 4.1rem;
-  line-height: 65%;
+  /*margin-left: 30vh;
+  margin-top: 50vh;*/
 }
 
-.zuhause-text p1{
-  font-size: 12.3rem;
-  line-height: 30%;
+.bleiben{
+  font-size: 4rem;
+    font-weight: 500;
 }
 
-.zuhause-text p2{
+.sie{
+  font-size: 10.6rem;
+  line-height: 80%;
+    font-weight: 500;
+}
+
+.zuhause{
   font-size: 3.4rem;
-  line-height: 140%;
+  line-height: 10%;
+  padding-top: -500px;
+  font-weight: 500;
+}
+
+.raster {
+  display: grid;
+  position: fix;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20vh;
+  border: 10px white solid;
+  width: 500px;
+  height: 500px;
+  animation-name: raster;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.bewegen {
+  font-size: 5rem;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  color: white;
+  position: relative;
+  animation-name: bewegen;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.bewegen:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bewegen {
+  0% {
+    left: 0px;
+    top: 100px;
+  }
+
+  10%{
+  left: 0px;
+  top: -100px;
+  }
+
+
+  50%{
+    left: 230px;
+    top: 100px;
+  }
+
+  75%{
+    left: 90px;
+    top:-100px;
+  }
+  100%{
+    left: 120px;
+    top: 0px;
+  }
+}
+
+@keyframes raster {
+  3% {
+    border-color: red;
+  }
+
+  20%{
+    border-color: blue;
+  }
+
+  50%{
+    border-color: pink;
+  }
+  90%{
+    border-color: white;
+  }
 }
 
 
@@ -172,7 +349,24 @@ section p {
   font-weight: 400;
 }
 
+.maison2 {
+  display: flex;
+  background: #8E00FD;
+  color: white;
+  grid-area: maison2;
+  align-items: center;
+  font-weight: 400;
+}
+
 .maison p {
+  margin: auto;
+  text-align: center;
+  font-size: 9rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+}
+
+.maison2 p {
   margin: auto;
   text-align: center;
   font-size: 9rem;
