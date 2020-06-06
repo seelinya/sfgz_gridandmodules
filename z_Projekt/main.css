@@ -17,6 +17,28 @@ body {
   margin: auto;
 }
 
+.sidenav {
+  height: 30vh;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  padding-top: 55vh;
+  padding-bottom: 3vh;
+  padding-left: 27px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 3vh;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #8E00FD;
+}
+
 header {
   grid-area: header;
   color: white;
@@ -47,7 +69,6 @@ header a:hover {
   text-decoration: none;
   text-align: right;
   letter-spacing: 0.12rem;
-  font-size: 0.9rem;
 }
 
 header audio {
@@ -204,22 +225,20 @@ transparent;
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  padding-top: 15vh;
-  padding-left: 5vh;
+  padding-top: 10vh;
+  padding-left: 12vh;
 }
 
 .mouseover 		{
-        display: flex;
+    display: flex;
 		background-image:url("./z_bilder/website.png");
 		background-repeat: no-repeat;
 		width:80vw;
-        padding-left: 10vw;
-        background-size: contain;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 				}
-
 
 
 .mouseover:hover
@@ -230,8 +249,8 @@ transparent;
         justify-content: center;
         align-items: center;
         background-size: contain;
-        padding-left: 10vw;
         background-color: transparent;
+        transition-delay:1s;
 				}
 
 @keyframes voila {
@@ -243,12 +262,12 @@ transparent;
 .madame2 {
   display: flex;
   background: linear-gradient(to bottom right, #3801FF, #CC1E79);
-  color: white;
   grid-area: madame2;
   font-size: 1.3rem;
   font-weight: 400;
-  justify-items: center;
-  align-items: center;
+  letter-spacing: 0.1rem;
+  padding-top: 10vh;
+  padding-left: 12vh;
 }
 
 .madame p {
@@ -861,29 +880,42 @@ transparent;
 
 }
 
+
 .vermeiden {
+  display: flex;
+  background: black;
   grid-area: vermeiden;
-  margin-top: 50px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  padding-top: 10vh;
+  padding-left: 12vh;
 }
 
-.vermeiden h1 {
-  color: #8E00FD;
-  text-align: left;
-  font-size: 5rem;
-  letter-spacing: 0.4rem;
-  font-weight: 500;
-  margin-left: 50px;
-}
+.vermeiden2 		{
+        display: flex;
+		background-image:url("./z_bilder/website2_gif.png");
+		background-repeat: no-repeat;
+		width:80vw;
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+				}
 
-.vermeiden h2 {
-  color: #8E00FD;
-  text-align: right;
-  font-size: 5rem;
-  letter-spacing: 0.4rem;
-  font-weight: 500;
-  margin-right: 50px;
-  margin-bottom: 50px;
-}
+
+.vermeiden2:hover
+				{
+				background-image:url("./z_bilder/wir_rufen_die.gif");
+				background-repeat:no-repeat;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        background-color: transparent;
+        transition-delay:1s;
+				}
+
 
 footer {
   display: block;
@@ -974,7 +1006,7 @@ footer h1 {
     font-size: 0.9rem;
     font-weight: 400;
     margin-left: 3vw;
-    margin-top: 5vh;
+    margin-top: 4.5vh;
     letter-spacing: 0.1rem;
     text-align: center;
     line-height: 160%;
