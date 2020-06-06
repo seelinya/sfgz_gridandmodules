@@ -11,9 +11,9 @@ body {
   margin: auto;
   background: black;
   display: grid;
-  grid-template-areas: "section section section" "ernst ernst ernst" "zuhause1 zuhause1 zuhause1" "madame madame madame" "zuhause2 zuhause2 zuhause2" "maison maison maison" "zuhause3 zuhause3 zuhause3" "vermeiden vermeiden vermeiden" "zuhause4 zuhause4 zuhause4" "madame2 madame2 madame2" "zuhause5 zuhause5 zuhause5" "maison2 maison2 maison2" "zuhause6 zuhause6 zuhause6" "footer footer footer";
+  grid-template-areas: "section section section" "ernst ernst ernst" "zuhause1 zuhause1 zuhause1" "madame madame madame" "zuhause2 zuhause2 zuhause2" "maison maison maison" "zuhause3 zuhause3 zuhause3" "vermeiden vermeiden vermeiden" "zuhause4 zuhause4 zuhause4" "madame2 madame2 madame2" "zuhause5 zuhause5 zuhause5" "maison2 maison2 maison2" "zuhause6 zuhause6 zuhause6" "footer footer footer" "impressum impressum impressum";
   grid-template-columns: 6em 1fr 6em;
-  grid-template-rows: repeat(14, 100vh);
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 85vh 15vh;
   margin: auto;
 }
 
@@ -37,8 +37,8 @@ header a {
   letter-spacing: 0.12rem;
   font-size: 0.9rem;
   margin-right: 30px;
-  padding-right: 30px;
-  margin-left: -20px;
+  padding-right: 40px;
+  margin-left: -35px;
 }
 
 header a:hover {
@@ -50,8 +50,13 @@ header a:hover {
   font-size: 0.9rem;
 }
 
-header img {
-  height: 30px;
+header audio {
+  width: 50px;
+}
+
+header audio:hover {
+  width: 500px;
+
 }
 
 
@@ -195,13 +200,52 @@ transparent;
 .madame {
   display: flex;
   background: linear-gradient(to bottom right, #3801FF, #CC1E79);
-  color: white;
   grid-area: madame;
   font-size: 1.3rem;
-  font-weight: lighter;
-  justify-items: center;
-  align-items: center;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  padding-top: 15vh;
+  padding-left: 5vh;
 }
+
+.mouseover 		{
+        display: flex;
+				background-image:url("./z_bilder/website.png");
+				background-repeat: no-repeat;
+				width:80vw;
+        padding-left: 10vw;
+        background-size: contain;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+				}
+
+.mouseover img	{
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        padding-left: 10vw;
+        background-color: transparent;
+    	  }
+
+img.mouseover:hover
+				{
+				background-image:url("./z_bilder/website2.gif");
+				background-repeat:no-repeat;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        padding-left: 10vw;
+        background-color: transparent;
+				}
+
+@keyframes voila {
+  50% {
+    opacity: 1;
+  }
+   }
 
 .madame2 {
   display: flex;
@@ -209,15 +253,14 @@ transparent;
   color: white;
   grid-area: madame2;
   font-size: 1.3rem;
-  font-weight: lighter;
+  font-weight: 400;
   justify-items: center;
   align-items: center;
 }
 
 .madame p {
   text-align: center;
-  display:flex;
-  margin:auto;
+  margin: auto;
 }
 
 .madame2 p {
@@ -300,6 +343,16 @@ transparent;
   display: block;
 }
 
+.raster {
+  display: grid;
+  position: fix;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20vh;
+  border: 2px white solid;
+  width: 500px;
+  height: 500px;
+}
 .raster1 {
   display: grid;
   position: fix;
@@ -320,8 +373,25 @@ transparent;
   border: 11px white solid;
   width: 500px;
   height: 500px;
-  animation-name: raster;
+  animation-name: raster2;
   animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  z-index: 5;
+}
+
+.raster3 {
+  display: grid;
+  position: fix;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20vh;
+  border: 11px white solid;
+  width: 500px;
+  height: 500px;
+  animation-name: raster3;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate-reverse;
@@ -364,7 +434,7 @@ transparent;
   color: white;
   position: relative;
   animation-name: bewegen3;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate-reverse;
@@ -379,6 +449,34 @@ transparent;
   position: relative;
   animation-name: bewegen4;
   animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.bewegen5 {
+  font-size: 5rem;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  color: white;
+  position: relative;
+  animation-name: bewegen5;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.bewegen6 {
+  font-size: 5rem;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  color: white;
+  position: relative;
+  animation-name: bewegen6;
+  animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate-reverse;
@@ -496,7 +594,7 @@ transparent;
     left: 0px;
     top: 20px;
     transform: rotate(200deg);
-    color:
+    color: #FAFF01;
   }
 
   10%{
@@ -509,19 +607,21 @@ transparent;
     left: 00px;
     top: 30px;
       transform: rotate(-150deg);
+      color: #03F8CC;
   }
 
 
   50%{
     left: 0px;
     top: -40px;
-    transform: rotate(0deg);
+    transform: rotate(70deg);
   }
 
   75%{
     left: 250px;
     top: 130px;
     transform: rotate(0deg);
+    color: #8E00FD;
   }
   100%{
     left: 70px;
@@ -530,7 +630,81 @@ transparent;
   }
 }
 
-@keyframes raster {
+@keyframes bewegen5 {
+  0% {
+    left: 0px;
+    top: 100px;
+  }
+
+  10%{
+    left: 230px;
+    top: 0px;
+  }
+
+  30%{
+    left: 00px;
+    top: 170px;
+    transform: rotate(20deg);
+  }
+
+
+  50%{
+    left: 200px;
+    top: -100px;
+  }
+
+  75%{
+    left: 30px;
+    top: 170px;
+    transform: rotate(-10deg);
+  }
+  100%{
+    left: 120px;
+    top: -110px;
+  }
+}
+
+@keyframes bewegen6 {
+  0% {
+    left: 0px;
+    top: 100px;
+    opacity: 1;
+  }
+
+  10%{
+    left: 330px;
+    top: 0px;
+    opacity: 0;
+    transform: rotate(10deg);
+  }
+
+  30%{
+    left: -40px;
+    top: 170px;
+    opacity: 0;
+  }
+
+
+  50%{
+    left: 250px;
+    top: -100px;
+    opacity: 1;
+  }
+
+  75%{
+    left: 30px;
+    top: 220px;
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+  100%{
+    left: 120px;
+    top: -180px;
+    opacity: 1;
+  }
+}
+
+@keyframes raster2 {
   3% {
     border-color: #CA9EFF;
   }
@@ -547,6 +721,19 @@ transparent;
   }
 }
 
+@keyframes raster3 {
+  33% {
+    border-color: #3801FF;
+  }
+
+  66%{
+    border-color: #F80356;
+  }
+  99%{
+    border-color: #8E00FD;
+  }
+}
+
 
 .maison {
   display: flex;
@@ -555,6 +742,24 @@ transparent;
   grid-area: maison;
   align-items: center;
   font-weight: 400;
+  animation-name: maison-background;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.maison-text {
+  position: relative;
+  animation-name: maison;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+}
+
+.maison-text:hover {
+  animation-play-state: paused;
 }
 
 .maison2 {
@@ -564,6 +769,11 @@ transparent;
   grid-area: maison2;
   align-items: center;
   font-weight: 400;
+  animation-name: maison-background;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
 }
 
 .maison p {
@@ -580,6 +790,82 @@ transparent;
   font-size: 9rem;
   letter-spacing: 0.4rem;
   font-weight: 500;
+}
+
+@keyframes maison {
+  0% {
+    right: 110px;
+    opacity: 1;
+  }
+
+  10% {
+    right: -130px;
+    opacity: 1;
+  }
+
+  20%{
+    right: 50px;
+    top: 10px;
+    opacity: 0.2;
+  }
+
+  30% {
+    right: -50px;
+    opacity: 1;
+  }
+
+  40%{
+    right: 150px;
+    opacity: 0.2;
+  }
+
+50%{
+    right: -150px;
+    opacity: 0.9;
+    top: -10px;
+  }
+
+  60%{
+    right: 90px;
+    opacity: 0.2;
+  }
+
+  70% {
+    right: -90px;
+    opacity: 1;
+    top: 10px;
+  }
+
+  80%{
+    right: 120px;
+    opacity: 0.2;
+  }
+
+90%{
+    right: -120px;
+    opacity: 0.7;
+    top: -10px;
+  }
+}
+
+@keyframes maison-background {
+
+  25% {
+    background-color: #670123;
+  }
+
+  50%{
+    background-color: #8E00FD;
+  }
+
+  75% {
+    background-color: #370062;
+  }
+
+  100%{
+    background-color: #F80356;
+  }
+
 }
 
 .vermeiden {
@@ -605,13 +891,48 @@ transparent;
   margin-right: 50px;
   margin-bottom: 50px;
 }
+
 footer {
-  display: grid;
+  display: block;
   background: black;
   color: white;
   grid-area: footer;
+  height: 85vh;
+  padding: 20vh;
 }
 
+.test p {
+    color: white;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 0.25rem;
+    font-weight: 400;
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #8E00FD; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      typing 4s steps(40) 1s 1 normal both,
+      blink-caret .5s step-end infinite;
+      /*animation-iteration-count: infinite;*/
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 27rem;}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: white; }
+  50% { border-color: #8E00FD; }
+}
+
+/*
 footer p {
   margin-top: 20vh;
   font-size: 1.2rem;
@@ -619,26 +940,89 @@ footer p {
   font-weight: 500;
   line-height: 1%;
   text-align: center;
-}
+} */
 
 footer h1 {
-  margin-top: 10vh;
-  font-size: 6rem;
-  letter-spacing: 0.15rem;
+  padding-top: 3vh;
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
   font-weight: 500;
   line-height: 1%;
   text-align: center;
+  line-height: 130%
+  position: static;
 }
 
-footer h2 {
-  font-size: 0.8rem;
-  letter-spacing: 0.10rem;
-  font-weight: lighter;
-  text-align: center;
-  margin-top: 10vh;
-}
+.impressum {
+  display: grid;
+  background: linear-gradient(to bottom right, #220023, #23003F, #0E0018, #250032);
+  background-size: 400% 400%;
+  color: #8E00FD;
+  grid-area: impressum;
+  height: 15vh;
+  animation: impressum-color 50s ease-in-out infinite;
+  }
 
+  @keyframes impressum-color {
+    0% {
+      background-position: 0 50%;
+      }
 
+    50% {
+      background-position: 300% 50%;
+      }
+
+    100% {
+        background-position: 0 50%;
+        }
+  }
+
+  .impressum h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-left: 3vw;
+    margin-top: 5vh;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    line-height: 160%;
+  }
+
+  .purple {
+    color: #8E00FD;
+    animation-name: longer;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    line-height: 200%;
+    font-weight: 100;
+    animation-delay: 5s;
+  }
+
+  @keyframes longer {
+    0% {
+      opacity: 0;
+      }
+
+    50% {
+      opacity: 1;
+       font-weight: 100;
+       margin-right: 7rem;
+       margin-left: 7rem;
+      }
+  }
+
+  .mail {
+    color: #8E00FD;
+    text-decoration: none;
+  }
+
+  .mail:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+/*
 }
     @media all and (max-width: 48em) {
       body {
@@ -667,11 +1051,13 @@ footer h2 {
         font-size: 4rem;
       }
 
-      .footer{
+    footer{
         background: #8E00FD;
         grid-area: footer;
         text-align: center;
         font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
       }
 
       .rotate {
@@ -680,6 +1066,6 @@ footer h2 {
         color: white;
       }
 
-
+*/
 
     }
