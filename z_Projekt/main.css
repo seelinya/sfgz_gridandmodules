@@ -917,15 +917,15 @@ transparent;
 
 
 .vermeiden2:hover
-				{
-				background-image:url("./z_bilder/wir_rufen_die.gif");
-				background-repeat:no-repeat;
-        width: 80vw;
-        justify-content: center;
-        align-items: center;
-        background-size: contain;
-        transition-delay:1s;
-				}
+	{
+		background-image:url("./z_bilder/wir_rufen_die.gif");
+		background-repeat:no-repeat;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    transition-delay:1s;
+		}
 
 
 footer {
@@ -935,7 +935,7 @@ footer {
   grid-area: footer;
   height: 85vh;
   padding: 20vh;
-}
+  }
 
 .test p {
     color: white;
@@ -980,7 +980,7 @@ footer p {
 
 footer h1 {
   padding-top: 3vh;
-  font-size: 5rem;
+  font-size: 4.5rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
   line-height: 1%;
@@ -1043,8 +1043,8 @@ footer h1 {
     50% {
       opacity: 1;
        font-weight: 100;
-       margin-right: 7rem;
-       margin-left: 7rem;
+       margin-right: 6.5rem;
+       margin-left: 6.5rem;
       }
   }
 
