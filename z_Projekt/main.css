@@ -9,6 +9,7 @@ font-family: 'Roboto', sans-serif;
 body {
   max-width: 100vw;
   margin: auto;
+  overlfow-x: hidden;
   background: black;
   display: grid;
   grid-template-areas: "section section section" "ernst ernst ernst" "zuhause1 zuhause1 zuhause1" "madame madame madame" "zuhause2 zuhause2 zuhause2" "maison maison maison" "zuhause3 zuhause3 zuhause3" "vermeiden vermeiden vermeiden" "zuhause4 zuhause4 zuhause4" "madame2 madame2 madame2" "zuhause5 zuhause5 zuhause5" "maison2 maison2 maison2" "zuhause6 zuhause6 zuhause6" "footer footer footer" "impressum impressum impressum";
@@ -38,6 +39,9 @@ body {
 .sidenav a:hover {
   color: #8E00FD;
 }
+
+.sidenav a:active {color: red; }
+
 
 
 header {
@@ -72,7 +76,9 @@ header a:hover {
 
 header audio {
   width: 50px;
-  margin-left: 170px;
+  margin-left: 100px;
+  z-index: 50;
+  position: relative;
 }
 
 
