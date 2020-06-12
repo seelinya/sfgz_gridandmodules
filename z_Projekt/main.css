@@ -52,6 +52,7 @@ header {
   width: 100vw;
   margin-top: 27px;
   justify-content: space-between;
+  z-index: 50;
 }
 
 header a {
@@ -76,8 +77,7 @@ header a:hover {
 
 header audio {
   width: 50px;
-  margin-left: 100px;
-  z-index: 50;
+  margin-left: 27px;
   position: relative;
 }
 
@@ -939,7 +939,6 @@ footer {
   background: black;
   color: white;
   grid-area: footer;
-  height: 85vh;
   padding: 20vh;
   }
 
